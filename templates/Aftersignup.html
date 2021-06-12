@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+body{
+background-color:#E040FB;
+z-index:1;
+overflow-y:hidden;
+overflow-x:hidden;
+}
+ul{
+list-style-type:none;
+margin:0px;
+padding:0px;
+overflow:hidden;
+background-color:#333;
+opacity:0.4;
+}
+li{
+float:left;
+}
+li a{
+display:block;
+color:white;
+text-align:center;
+padding:14px 16px;
+text-decoration:none;
+}
+.bubbles{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:0;
+-webkit-transform:translateZ(0);
+transform:translateZ(0);
+color:red;
+border-radius:20px;
+}
+.bubbles li{
+position:absolute;
+list-style:none;
+display:block;
+background-color:rgba(255,255,255,0.20);
+bottom:-100px;
+-webkit-animation:square 20s infinite;
+animation:square 20s infinite;
+-webkit-animation-duration:17s;
+animation-duration:17s;
+}
+.bubbles li:nth-child(1){
+width:40px;
+height:40px;
+left:20%;
+}
+.bubbles li:nth-child(2){
+width:60px;
+height:60px;
+left:40%;
+-webkit-animation-delay:2s;
+animation-delay:2s;
+-wekit-animation-duration:17s;
+animation-duration:17s;
+}
+.bubbles li:nth-child(3)
+{
+width:20px;
+height:20px;
+left:60%;
+-webkit-animation-delay:4s;
+animation-delay:4s;
+-wekit-animation-duration:12s;
+animation-duration:12s;
+}
+.bubbles li:nth-child(4)
+{
+width:80px;
+height:80px;
+left:80%;
+-webkit-animation-delay:1s;
+animation-delay:1s;
+-wekit-animation-duration:22s;
+animation-duration:22s;
+}
+.bubbles li:nth-child(5)
+{
+width:50px;
+height:50px;
+left:10%;
+-webkit-animation-delay:5s;
+animation-delay:5s;
+-wekit-animation-duration:10s;
+animation-duration:10s;
+}
+@-webkit-keyframes square{
+0%{
+-webkit-transform:translateY(0);
+transform:translateY(0);
+}
+100%{
+-webkit-transform:translateY(-1080px) rotate(630deg);
+transform:translateY(-1080px) rotate(630deg);
+}
+}
+p{
+  font-size:20px;
+  color:white;
+}
+</style>
+  </head>
+   <body>
+   <ul class="bubbles">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+   
+      <p> {{ msg }}</p>
+      
+      <p><a href="{{ url_for('login') }}">Login</a>
+      </p>
+      
+   </body>
+</html>
